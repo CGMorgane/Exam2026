@@ -1,6 +1,99 @@
 @use "_variables.scss" as *;
 
 header{
+  position: absolute;
   width: 100%;
-  background-color: $bg-principal;
+  height: 100px;
+
+  #logo{
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 223px;
+    height: 79px;
+    background-image: url("/img/logo2.png");
+  }
+}
+
+.main-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  z-index: 100;
+  font-family: $font-orbitron;
+  font-weight: 500;
+  font-size: 36px;
+}
+
+// cache la checkbox de l'écran
+.burger-checkbox {
+  display: none;
+}
+
+// bouton Burger
+.burger-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 110;
+
+  .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+// Menu masqué par défaut
+.nav-menu {
+  position: fixed;
+  top: 0;
+  right: -100%; // Caché à droite
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(10, 10, 12, 0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  transition: right 0.4s ease-in-out;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $text-color;
+    }
+  }
+}
+
+.burger-checkbox:checked + .burger-btn {
+  .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+}
+
+.burger-checkbox:checked ~ .nav-menu {
+  right: 0;
 }

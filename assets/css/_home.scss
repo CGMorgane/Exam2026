@@ -1,0 +1,39 @@
+@use "_variables.scss" as *;
+
+#home{
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  background-image: url("/img/home.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+
+  .box-titles{
+    font-family: $font-orbitron;
+    grid-column: span 11;
+    grid-row: span 11;
+    justify-items: end;
+    align-content: end;
+      p{
+        color: $text-color2;
+        font-weight: 500;
+        font-size: 36px;
+      }
+      h1{
+        color: $text-color2;
+        font-weight: 500;
+        font-size: 110px;
+      }
+      h2{
+        font-family: $font-syncopate;
+        font-weight: 400;
+        font-size: 128px;
+        color: $text-color;
+      }
+  }
+}
