@@ -4,7 +4,11 @@
 @use "_header.scss" as *;
 @use "_home.scss" as *;
 @use "_lineup.scss" as *;
+@use "_informations.scss" as *;
 
+html, body {
+  overflow-x: hidden;
+}
 
 .slide{
   width: 100%;
