@@ -1,0 +1,59 @@
+@use "_variables.scss" as *;
+
+#galerie{
+  background-color: $bg-principal;
+  .wrapper {
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+
+    #titre-galerie{
+      padding-top: 100px;
+      color: $text-color;
+      font-family: $font-orbitron;
+      font-weight: 900;
+      font-size: 100px;
+      margin-left: 100px;
+
+    }
+
+    img{
+      transition: transform 0.3s ease-in-out;
+      filter: grayscale(1);
+      border-radius: 15px 15px;
+    }
+    img:hover {
+      transform: scale(1.1);
+      filter: grayscale(0);
+    }
+
+    #ligne1{
+      float: left;
+    }
+
+    #ligne1 img{
+      width: 600px;
+      height: 400px;
+      background-size: cover;
+      margin-left: 100px;
+      margin-top: 50px;
+      object-fit: cover;
+    }
+
+    #ligne2{
+      float: left;
+    }
+
+    #ligne2 img{
+      width: 600px;
+      height: 400px;
+      background-size: cover;
+      margin-left: 100px;
+      margin-top: 50px;
+      object-fit: cover;
+    }
+  }
+}
+
+
+
