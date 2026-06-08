@@ -1,32 +1,127 @@
 @use "_variables.scss" as *;
 
-#info{
-  background-color: rebeccapurple;
-  .info-title{
+#info {
+  position: relative;
+  background-color: $text-color2;
+  margin-top: 0;
+  padding-top: 0;
+  min-height: 100vh;
+  overflow: hidden;
+
+  .info-title {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     color: $bg-principal;
 
-    #right{
+
+    #right {
       font-family: $font-orbitron;
       font-weight: 900;
-      font-size: 280px;
+      font-size: 375px;
       z-index: 100;
+      margin-top: 0;
+      line-height: 0.73;
+      display: inline-block;
     }
 
-    #turned{
+    #turned {
       position: absolute;
-      margin-top: 420px;
+      top: 170px;
       color: $text-color-opacity;
       font-family: $font-orbitron;
       font-weight: 900;
-      font-size: 280px;
+      font-size: 375px;
       transform: scaleY(-1);
       filter: blur(0.5px);
       opacity: 60%;
       z-index: 99;
+    }
+  }
+
+  .carousel-wrapper {
+    width: 100%;
+    min-height: calc(100vh - 204px);
+    background-color: $bg-principal;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    box-sizing: border-box;
+    padding-top: 450px;
+    padding-left: 5%;
+    padding-right: 5%;
+
+    .carousel-track {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+      width: 100%;
+
+      scrollbar-width: none;
+      &::-webkit-scrollbar { display: none; }
+    }
+
+    .carousel-slide {
+      flex: 0 0 100%;
+      scroll-snap-align: start;
+      box-sizing: border-box;
+      display: flex;
+      align-items: flex-start;
+      position: relative;
+      padding: 0;
+
+      .slide-content {
+        width: 75vw;
+        max-width: 75vw;
+        padding-right: 5%;
+        box-sizing: border-box;
+      }
+
+      .slide-title {
+        font-family: $font-orbitron;
+        color: $text-color;
+        font-size: 64px;
+        font-weight: 700;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-top: 0;
+      }
+
+      .slide-text {
+        color: $text-color2;
+        font-family: $font-orbitron;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 1.8;
+        width: 100%;
+      }
+
+      .carousel-next-btn {
+        position: absolute;
+        right: 2%;
+        top: 50%;
+        background: none;
+        border: none;
+        cursor: pointer;
+        width: 70px;
+        height: 70px;
+        display: inline-block;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+
+        &:hover {
+          transform: scale(1.08);
+          opacity: 0.8;
+        }
+
+        .arrow-icon {
+          width: 100%;
+          height: 100%;
+          circle, polyline { stroke: $text-color2; }
+        }
+      }
     }
   }
 }
