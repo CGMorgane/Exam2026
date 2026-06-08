@@ -23,7 +23,7 @@ header{
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  z-index: 100;
+  z-index: 103;
   font-family: $font-orbitron;
   font-weight: 500;
   font-size: 36px;
@@ -42,6 +42,10 @@ header{
   width: 30px;
   height: 21px;
   cursor: pointer;
+  z-index: 110;
+  position: fixed;
+  top: 30px;
+  right: 40px;
   z-index: 110;
 
   .bar {
