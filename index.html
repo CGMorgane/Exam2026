@@ -6,6 +6,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="build/css/style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Graspop Festival</title>
 </head>
 <body>
@@ -47,12 +49,12 @@
 <div class="slide" id="line-up">
 
     <div class="lineup-title">
-        <p id="right">Line-Up</p>
+        <p id="right"  data-aos="fade-up">Line-Up</p>
         <p id="turned">Line-Up</p>
     </div>
 
     <div class="planning-haut">
-        <div id="jeudi">
+        <div id="jeudi" data-aos="fade-down-right">
             <p>Jeudi 18 Juin</p>
             <ul>
                 <li><span class="info-lineup">Accept</span> : South Stage à 13h15</li>
@@ -68,7 +70,7 @@
             </ul>
         </div>
 
-        <div id="vendredi">
+        <div id="vendredi" data-aos="fade-up-left">
             <p>Vendredi 19 Juin</p>
             <ul>
                 <li><span class="info-lineup">Kublai Khan TX</span> : Jupiler Stage à 13h00</li>
@@ -84,7 +86,7 @@
         </div>
     </div>
 
-    <div class="planning-bas">
+    <div class="planning-bas" data-aos="fade-down-right">
         <div id="samedi">
             <p>Samedi 20 Juin</p>
             <ul>
@@ -100,7 +102,7 @@
             </ul>
         </div>
 
-        <div id="dimanche">
+        <div id="dimanche" data-aos="fade-up-left">
             <p>Dimanche 21 Juin</p>
             <ul>
                 <li><span class="info-lineup">Battle Beast</span> : North Stage à 12h30</li>
@@ -122,9 +124,10 @@
 
 <div class="slide" id="info">
     <div class="info-title">
-        <p id="right">Informations</p>
-        <p id="turned">Informations</p>
+        <p id="right-info" data-aos="fade-up">Informations</p>
+        <p id="turned-info">Informations</p>
     </div>
+
     <div class="carousel-wrapper">
         <div class="carousel-track">
 
@@ -136,9 +139,6 @@
                         Que vous soyez de la team « tente Quechua installée en 2 secondes » ou « pro du camping-car », un espace dédié et sécurisé vous attend pour chiller au calme avant de retourner dans la fosse.
                     </p>
                 </div>
-                <a href="#slide-2" class="carousel-next-btn" aria-label="Suivant">
-                    <svg viewBox="0 0 100 100" class="arrow-icon"><circle cx="50" cy="50" r="45" stroke="white" stroke-width="4" fill="none" /><polyline points="42,30 62,50 42,70" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none" /></svg>
-                </a>
             </div>
 
             <div class="carousel-slide" id="slide-2">
@@ -149,9 +149,6 @@
                         Le site est équipé de grands blocs sanitaires avec des toilettes sèches éco-responsables et des douches à eau chaude. De quoi vous refaire une beauté et rester frais du premier au dernier accord de guitare.
                     </p>
                 </div>
-                <a href="#slide-3" class="carousel-next-btn" aria-label="Suivant">
-                    <svg viewBox="0 0 100 100" class="arrow-icon"><circle cx="50" cy="50" r="45" stroke="white" stroke-width="4" fill="none" /><polyline points="42,30 62,50 42,70" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none" /></svg>
-                </a>
             </div>
 
             <div class="carousel-slide" id="slide-3">
@@ -161,9 +158,6 @@
                         Une petite faim ? Un immense creux ? Nos food trucks locaux ont de quoi ravir toutes les papilles. Du burger frites bien généreux aux options végétariennes, vegan et sans gluten, il y en a pour tous les goûts.
                     </p>
                 </div>
-                <a href="#slide-4" class="carousel-next-btn" aria-label="Suivant">
-                    <svg viewBox="0 0 100 100" class="arrow-icon"><circle cx="50" cy="50" r="45" stroke="white" stroke-width="4" fill="none" /><polyline points="42,30 62,50 42,70" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none" /></svg>
-                </a>
             </div>
 
             <div class="carousel-slide" id="slide-4">
@@ -173,9 +167,6 @@
                         Pour trinquer à ces moments inoubliables, nos différents bars vous attendent aux quatre coins du site. Bières artisanales de la région, softs rafraîchissants, jus de fruits locaux ou cocktails signatures...
                     </p>
                 </div>
-                <a href="#slide-5" class="carousel-next-btn" aria-label="Suivant">
-                    <svg viewBox="0 0 100 100" class="arrow-icon"><circle cx="50" cy="50" r="45" stroke="white" stroke-width="4" fill="none" /><polyline points="42,30 62,50 42,70" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none" /></svg>
-                </a>
             </div>
 
             <div class="carousel-slide" id="slide-5">
@@ -186,24 +177,29 @@
                         De Lijn : Assure les navettes gratuites entre la gare de Mol et le site du festival.
                     </p>
                 </div>
-                <a href="#slide-1" class="carousel-next-btn" aria-label="Suivant">
-                    <svg viewBox="0 0 100 100" class="arrow-icon"><circle cx="50" cy="50" r="45" stroke="white" stroke-width="4" fill="none" /><polyline points="42,30 62,50 42,70" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none" /></svg>
-                </a>
             </div>
-        </div>
+
+        </div> <button type="button" class="carousel-next-btn" aria-label="Suivant">
+        <svg viewBox="0 0 100 100" class="arrow-icon">
+            <circle cx="50" cy="50" r="45" stroke="white" stroke-width="4" fill="none" />
+            <polyline points="42,30 62,50 42,70" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+        </svg>
+    </button>
+
     </div>
 </div>
+
     <!-------------------------------GALERIE------------------------------->
 <div class="slide" id="galerie">
-    <div class="wrapper">
-        <div id="titre-galerie">Galerie</div>
-        <div id="ligne1">
+    <div class="wrapper" >
+        <div id="titre-galerie"   data-aos="fade-up">Galerie</div>
+        <div id="ligne1"   data-aos="fade-up">
             <img src="/img/image2.jpg" alt="">
             <img src="/img/image1.jpg" alt="">
             <img src="/img/image3.jpg" alt="">
         </div>
 
-        <div id="ligne2">
+        <div id="ligne2"   data-aos="fade-up">
             <img src="/img/image5.jpg" alt="">
             <img src="/img/image4.jpeg" alt="">
             <img src="/img/image6.jpg" alt="">
@@ -214,12 +210,12 @@
 <!-------------------------------TICKETS------------------------------->
 
 <div class="slide" id="tickets">
-    <div class="banner-container">
+    <div class="banner-container" >
         <div class="top-line"></div>
 
-        <div class="ticker-wrap">
-            <div class="ticker-track">
-                <div class="ticker-item">
+        <div class="ticker-wrap" >
+            <div class="ticker-track" >
+                <div class="ticker-item" >
                     <span class="outline">TICKETS</span> <span class="filled">TICKETS</span>
                     <span class="outline">TICKETS</span> <span class="filled">TICKETS</span>
                     <span class="outline">TICKETS</span> <span class="filled">TICKETS</span>
@@ -241,7 +237,7 @@
         </div>
     </div>
 
-    <div class="tickets-container">
+    <div class="tickets-container" data-aos="fade-up">
 
         <div id="combi">
             <p class="titre-haut">Ticket limité!</p>
@@ -253,7 +249,7 @@
         </div>
 
 
-        <div id="jeudi">
+        <div id="jeudi-ticket">
             <p class="titre-haut">Ticket limité!</p>
             <div id="jeudi-container">
                 <p>Ticket Combi <span>jeudi 18 juin</p>
@@ -263,7 +259,7 @@
         </div>
 
 
-        <div id="vendredi">
+        <div id="vendredi-ticket">
             <p class="titre-haut">Ticket limité!</p>
             <div id="vendredi-container">
                 <p>Ticket Combi <span>vendredi 19 juin</p>
@@ -273,7 +269,7 @@
         </div>
 
 
-        <div id="samedi">
+        <div id="samedi-ticket">
             <p class="titre-haut">Ticket limité!</p>
             <div id="samedi-container">
                 <p>Ticket Combi <span>samedi 20 juin</p>
@@ -284,7 +280,7 @@
 
 
 
-        <div id="dimanche">
+        <div id="dimanche-ticket">
             <p class="titre-haut">Ticket limité!</p>
             <div id="dimanche-container">
                 <p>Ticket Combi <span>dimanche 21 juin</p>
@@ -294,5 +290,31 @@
         </div>
     </div>
 </div>
+
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init(); // Cette ligne active la bibliothèque
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const track = document.querySelector("#info .carousel-track");
+        const nextBtn = document.querySelector("#info .carousel-next-btn");
+
+        nextBtn.addEventListener("click", () => {
+            const slideWidth = track.clientWidth;
+            const maxScroll = track.scrollWidth - slideWidth;
+
+            // Si on est tout au bout du carrousel, on revient au début
+            if (track.scrollLeft >= maxScroll - 10) {
+                track.scrollTo({ left: 0, behavior: "smooth" });
+            } else {
+                // Sinon, on avance d'une slide
+                track.scrollBy({ left: slideWidth, behavior: "smooth" });
+            }
+        });
+    });
+</script>
 </body>
 </html>

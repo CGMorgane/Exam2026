@@ -110,16 +110,16 @@
     #combi:hover{
       transform: scale(1.1);
     }
-    #jeudi:hover{
+    #jeudi-ticket:hover{
       transform: scale(1.1);
     }
-    #vendredi:hover{
+    #vendredi-ticket:hover{
       transform: scale(1.1);
     }
-    #samedi:hover{
+    #samedi-ticket:hover{
       transform: scale(1.1);
     }
-    #dimanche:hover{
+    #dimanche-ticket:hover{
       transform: scale(1.1);
     }
 
@@ -176,7 +176,7 @@
 
 
 
-    #jeudi{
+    #jeudi-ticket{
       transition: transform 0.3s ease-in-out;
       background-color: $bg-principal;
       width: 400px;
@@ -226,7 +226,7 @@
 
 
 
-    #vendredi{
+    #vendredi-ticket{
       transition: transform 0.3s ease-in-out;
       background-color: $bg-principal;
       width: 400px;
@@ -277,7 +277,7 @@
 
 
 
-    #samedi{
+    #samedi-ticket{
       transition: transform 0.3s ease-in-out;
       background-color: $bg-principal;
       width: 400px;
@@ -329,7 +329,7 @@
 
 
 
-    #dimanche{
+    #dimanche-ticket{
       transition: transform 0.3s ease-in-out;
       background-color: $bg-principal;
       width: 400px;
