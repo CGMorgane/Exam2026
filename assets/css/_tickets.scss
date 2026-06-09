@@ -1,0 +1,382 @@
+@use "_variables.scss" as *;
+
+#tickets{
+
+  .banner-container {
+    position: relative;
+    width: 100%;
+    padding: 100px 0;
+    overflow: hidden;
+    font-family: $font-orbitron;
+    font-weight: 900;
+
+
+    .top-line {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      width: 70%;
+      height: 2px;
+      background-color: #cc0000;
+    }
+
+    .bottom-line {
+      position: absolute;
+      bottom: 20px;
+      right: 0;
+      width: 70%;
+      height: 2px;
+      background-color: #cc0000;
+    }
+
+
+    .ticker-wrap {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .ticker-track {
+      display: flex;
+      width: max-content;
+      animation: scrollLeft 30s linear infinite;
+
+      .ticker-item {
+        display: flex;
+        gap: 40px;
+        padding-right: 40px;
+      }
+
+
+      span {
+        font-size: 130px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+
+      .filled {
+        color: #cc0000;
+      }
+
+
+      .outline {
+        color: transparent;
+        -webkit-text-stroke: 2px #cc0000;
+      }
+
+
+      @keyframes scrollLeft {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+
+  .tickets-container{
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    padding-top: 200px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+    .titre-haut{
+      padding-bottom: 30px;
+      display: flex;
+      justify-content: center;
+      font-family: $font-orbitron;
+      font-weight: 900;
+      color: $text-color;
+      font-size: 45px;
+    }
+
+    .titre-bas{
+      padding-top: 30px;
+      display: flex;
+      justify-content: center;
+      font-family: $font-orbitron;
+      font-weight: 900;
+      color: $text-color;
+      font-size: 30px;
+    }
+
+    #combi:hover{
+      transform: scale(1.1);
+    }
+    #jeudi:hover{
+      transform: scale(1.1);
+    }
+    #vendredi:hover{
+      transform: scale(1.1);
+    }
+    #samedi:hover{
+      transform: scale(1.1);
+    }
+    #dimanche:hover{
+      transform: scale(1.1);
+    }
+
+    #combi{
+      transition: transform 0.3s ease-in-out;
+      background-color: $bg-principal;
+      width: 400px;
+      min-height: 500px;
+      border-radius: 20px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      #combi-container{
+        position: relative;
+        background-color: $bg-secondaire;
+        width: 330px;
+        height: 280px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px 20px;
+        flex-direction: column;
+
+        p{
+          color: $text-colorN;
+          font-family: $font-orbitron;
+          font-weight: 900;
+          font-size: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          position: relative;
+        }
+
+        #prix-combi{
+          padding-top: 30px;
+          color: $text-color;
+          font-family: $font-orbitron;
+          font-weight: 900;
+          font-size: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+        }
+      }
+    }
+
+
+
+
+
+
+    #jeudi{
+      transition: transform 0.3s ease-in-out;
+      background-color: $bg-principal;
+      width: 400px;
+      min-height: 500px;
+      border-radius: 20px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      #jeudi-container{
+        position: relative;
+        background-color: $bg-secondaire;
+        width: 330px;
+        height: 280px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px 20px;
+        flex-direction: column;
+
+        p{
+          color: $text-colorN;
+          font-family: $font-orbitron;
+          font-weight: 900;
+          font-size: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          position: relative;
+        }
+
+        #prix-jeudi{
+          padding-top: 30px;
+          color: $text-color;
+          font-family: $font-orbitron;
+          font-weight: 900;
+          font-size: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+        }
+      }
+    }
+
+
+
+    #vendredi{
+      transition: transform 0.3s ease-in-out;
+      background-color: $bg-principal;
+      width: 400px;
+      min-height: 500px;
+      border-radius: 20px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      #vendredi-container{
+        position: relative;
+        background-color: $bg-secondaire;
+        width: 330px;
+        height: 280px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px 20px;
+        flex-direction: column;
+
+        p{
+          color: $text-colorN;
+          font-family: $font-orbitron;
+          font-weight: 900;
+          font-size: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          position: relative;
+        }
+
+        #prix-vendredi{
+          padding-top: 30px;
+          color: $text-color;
+          font-family: $font-orbitron;
+          font-weight: 900;
+          font-size: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+        }
+      }
+    }
+
+
+
+
+    #samedi{
+      transition: transform 0.3s ease-in-out;
+      background-color: $bg-principal;
+      width: 400px;
+      min-height: 500px;
+      border-radius: 20px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      #samedi-container{
+        position: relative;
+        background-color: $bg-secondaire;
+        width: 330px;
+        height: 280px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px 20px;
+        flex-direction: column;
+
+        p{
+          color: $text-colorN;
+          font-family: $font-orbitron;
+          font-weight: 900;
+          font-size: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          position: relative;
+        }
+
+        #prix-samedi{
+          padding-top: 30px;
+          color: $text-color;
+          font-family: $font-orbitron;
+          font-weight: 900;
+          font-size: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+        }
+      }
+    }
+
+
+
+
+
+    #dimanche{
+      transition: transform 0.3s ease-in-out;
+      background-color: $bg-principal;
+      width: 400px;
+      min-height: 500px;
+      border-radius: 20px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      #dimanche-container{
+        position: relative;
+        background-color: $bg-secondaire;
+        width: 330px;
+        height: 280px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px 20px;
+        flex-direction: column;
+
+        p{
+          color: $text-colorN;
+          font-family: $font-orbitron;
+          font-weight: 900;
+          font-size: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          position: relative;
+        }
+
+        #prix-dimanche{
+          padding-top: 30px;
+          color: $text-color;
+          font-family: $font-orbitron;
+          font-weight: 900;
+          font-size: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+        }
+      }
+    }
+
+  }
+}
+
