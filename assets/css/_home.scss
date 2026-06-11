@@ -19,6 +19,7 @@
     grid-row: span 11;
     justify-items: end;
     align-content: end;
+    text-align: right;
       p{
         color: $text-color2;
         font-weight: 500;
@@ -35,5 +36,51 @@
         font-size: 128px;
         color: $text-color;
       }
+
+    @media screen and (max-width: 1440px) {
+      p { font-size: 28px; }
+      h1 { font-size: 85px; }
+      h2 { font-size: 90px; }
+    }
+
+    // --- [PETITS ORDINATEURS / GRANDES TABLETTES (Moins de 1024px)] ---
+    @media screen and (max-width: 1024px) {
+      p { font-size: 24px; }
+      h1 { font-size: 70px; }
+      h2 { font-size: 75px; }
+    }
+
+    @media screen and (max-width: 866px) {
+      p { font-size: 20px; }
+      h1 { font-size: 60px; }
+      h2 { font-size: 65px; }
+    }
+
+    // --- [TABLETTES PORTRAIT (Moins de 768px)] ---
+    @media screen and (max-width: 768px) {
+      p { font-size: 20px; }
+      h1 { font-size: 55px; }
+      h2 { font-size: 50px; }
+    }
+
+    @media screen and (max-width: 585px) {
+      p { font-size: 15px; }
+      h1 { font-size: 40px; }
+      h2 { font-size: 40px; }
+    }
+
+    // --- [SMARTPHONES (Moins de 480px)] ---
+    @media screen and (max-width: 480px) {
+      p { font-size: 16px; }
+      h1 { font-size: 40px; }
+      h2 { font-size: 32px; }
+    }
+
+
+    @media screen and (max-width: 366px) {
+      p { font-size: 10px; }
+      h1 { font-size: 30px; }
+      h2 { font-size: 25px; }
+    }
   }
 }
