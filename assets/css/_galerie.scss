@@ -7,6 +7,7 @@
     margin: 0 auto;
     overflow: hidden;
 
+
     #titre-galerie{
       padding-top: 100px;
       color: $text-color;
@@ -27,10 +28,6 @@
       filter: grayscale(0);
     }
 
-    #ligne1{
-      float: left;
-    }
-
     #ligne1 img{
       width: 600px;
       height: 400px;
@@ -40,9 +37,7 @@
       object-fit: cover;
     }
 
-    #ligne2{
-      float: left;
-    }
+
 
     #ligne2 img{
       width: 600px;
