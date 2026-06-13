@@ -1,0 +1,56 @@
+@use "_variables.scss" as *;
+
+
+
+#map{
+
+  display: flex;
+  flex-direction: column;
+  padding-top: 150px;
+
+  #adresse{
+    position: relative;
+    display: flex;
+    height: 400px;
+    justify-content: center;
+    margin-top: 150px;
+    font-family: $font-orbitron;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 11%;
+    text-align: center;
+
+    .sponsors{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      width: 100%;
+      height: 200px;
+      background-color: rebeccapurple;
+
+      #jupiler{
+        grid-column: span 1;
+        background-color: #cc0000;
+      }
+      #redbull{
+        grid-column: span 1;
+        background-color: pink;
+      }
+      #studiobruseel{
+        grid-column: span 1;
+        background-color: green;
+      }
+      #rtbf{
+        grid-column: span 1;
+        background-color: blue;
+      }
+      #proximus{
+        grid-column: span 1;
+        background-color: yellow;
+      }
+    }
+    }
+
+}

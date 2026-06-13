@@ -9,7 +9,7 @@
   min-height: 100vh;
   font-family: $font-orbitron;
   font-weight: 900;
-
+  letter-spacing: 11%;
 
 
 
@@ -23,22 +23,23 @@
     .content {
       width: 100%;
       max-width: 500px;
-
+      padding: 20px;
+      margin: 0 auto;
 
       .title {
-
-        font-size: clamp(40px, 8vw, 200px);
+        font-size: clamp(40px, 6vw, 100px);
         color: $text-color;
-
-
+        text-align: center;
+        margin-bottom: 40px;
       }
-
 
       form {
         font-size: 1.2em;
         font-weight: 300;
         color: $text-colorN;
+        text-align: left;
       }
+
 
       .form-group {
         margin-bottom: 25px;
@@ -92,7 +93,8 @@
         font-weight: bold;
         cursor: pointer;
         transition: background-color 0.2s ease;
-
+        display: block;
+        margin: 30px auto 0 auto;
 
         &:hover {
           background-color: lighten($text-color, 10%);
