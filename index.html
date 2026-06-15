@@ -50,10 +50,10 @@
 
     <div class="lineup-title">
         <p id="right"  data-aos="fade-up">Line-Up</p>
-        <p id="turned">Line-Up</p>
     </div>
 
     <div class="planning-haut">
+
         <div id="jeudi" data-aos="fade-down-right">
             <p>Jeudi 18 Juin</p>
             <ul>
@@ -374,6 +374,18 @@
             } else {
 
                 track.scrollBy({ left: slideWidth, behavior: "smooth" });
+            }
+        });
+    });
+</script>
+
+<script>
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            // On cible la checkbox et on la décoche
+            const checkbox = document.getElementById('burger-toggle');
+            if (checkbox) {
+                checkbox.checked = false;
             }
         });
     });
