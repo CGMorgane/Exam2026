@@ -1,11 +1,11 @@
 @use "_variables.scss" as *;
 
-header{
+header {
   position: absolute;
   width: 100%;
   height: 100px;
 
-  #logo{
+  #logo {
     margin-top: 50px;
     margin-left: 50px;
     width: 223px;
@@ -41,8 +41,8 @@ header{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 30px;
-  height: 21px;
+  width: 38px;
+  height: 24px;
   cursor: pointer;
   z-index: 110;
   position: fixed;
@@ -54,6 +54,20 @@ header{
     height: 3px;
     background-color: $text-color;
     transition: all 0.3s ease-in-out;
+  }
+
+  &::after {
+    content: "MENU";
+    position: absolute;
+    bottom: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    font-family: $font-orbitron;
+    color: $text-color;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: color 0.3s ease-in-out;
   }
 }
 
@@ -88,13 +102,13 @@ header{
 
 .burger-checkbox:checked + .burger-btn {
   .bar:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
+    transform: translateY(10px) rotate(45deg);
   }
   .bar:nth-child(2) {
     opacity: 0;
   }
   .bar:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
+    transform: translateY(-11px) rotate(-45deg);
   }
 }
 
@@ -102,29 +116,23 @@ header{
   right: 0;
 }
 
-
-// --- [ORDINATEURS STANDARDS (Moins de 1440px)] ---
 @media screen and (max-width: 1440px) {
-  header{
-    #logo{
+  header {
+    #logo {
       margin-top: 35px;
       margin-left: 35px;
       width: 180px;
-      height: 64px; // Conserve le ratio
+      height: 64px;
     }
-
-    .nav-menu{
-      a{
-        font-size: 16px;
-      }
+    .nav-menu a {
+      font-size: 16px;
     }
   }
 }
 
-// --- [PETITS ORDINATEURS / GRANDES TABLETTES (Moins de 1024px)] ---
 @media screen and (max-width: 1024px) {
-  header{
-    #logo{
+  header {
+    #logo {
       margin-top: 25px;
       margin-left: 25px;
       width: 150px;
@@ -133,23 +141,24 @@ header{
   }
 }
 
-
-// --- [TABLETTES PORTRAIT (Moins de 768px)] ---
 @media screen and (max-width: 768px) {
-  header{
-    #logo{
+  header {
+    #logo {
       margin-top: 20px;
       margin-left: 20px;
       width: 130px;
       height: 46px;
     }
   }
+  .burger-btn {
+    top: 30px;
+    right: 30px;
+  }
 }
 
-// --- [SMARTPHONES (Moins de 480px)] ---
 @media screen and (max-width: 480px) {
-  header{
-    #logo{
+  header {
+    #logo {
       margin-top: 15px;
       margin-left: 15px;
       width: 110px;
@@ -159,8 +168,8 @@ header{
 }
 
 @media screen and (max-width: 320px) {
-  header{
-    #logo{
+  header {
+    #logo {
       margin-top: 5px;
       margin-left: 5px;
       width: 90px;
