@@ -190,21 +190,25 @@
 </div>
 
     <!-------------------------------GALERIE------------------------------->
-<div class="slide" id="galerie">
+<div class="slide" id="galerie" >
     <div class="wrapper" >
-        <div id="titre-galerie"   data-aos="fade-up">Galerie</div>
+        <div id="titre-galerie"  data-aos="fade-up" >Galerie</div>
         <div id="ligne1"   data-aos="fade-up">
-            <img src="/img/image2.jpg" alt="">
-            <img src="/img/image1.jpg" alt="">
-            <img src="/img/image3.jpg" alt="">
+            <img src="/img/image2.jpg" alt="image 1" data-aos="fade-up">
+            <img src="/img/image1.jpg" alt="image 2" data-aos="fade-up">
+            <img src="/img/image7.jpg" alt="image 7" data-aos="fade-up">
         </div>
 
         <div id="ligne2"   data-aos="fade-up">
-            <img src="/img/image5.jpg" alt="">
-            <img src="/img/image4.jpeg" alt="">
-            <img src="/img/image6.jpg" alt="">
+            <img src="/img/image5.jpg" alt="image 4" data-aos="fade-up">
+            <img src="/img/image6.jpg" alt="image 6" data-aos="fade-up">
+            <img src="/img/image8.jpg" alt="image 8" data-aos="fade-up">
         </div>
     </div>
+</div>
+<div id="galerie-modal" class="modal">
+    <span class="close-btn">&times;</span>
+    <img class="modal-content" id="img-full" src="" alt="Image en grand">
 </div>
 
 <!-------------------------------TICKETS------------------------------->
@@ -381,12 +385,48 @@
 <script>
     document.querySelectorAll('.nav-menu a').forEach(link => {
         link.addEventListener('click', () => {
-            // On cible la checkbox et on la décoche
+
             const checkbox = document.getElementById('burger-toggle');
             if (checkbox) {
                 checkbox.checked = false;
             }
         });
+    });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const modal = document.getElementById("galerie-modal");
+        const modalImg = document.getElementById("img-full");
+        const closeBtn = document.querySelector(".close-btn");
+
+
+        const galleryImages = document.querySelectorAll(".slide#galerie img");
+
+
+        galleryImages.forEach(img => {
+            img.addEventListener("click", function () {
+                modal.classList.add("active");
+                modalImg.src = this.src;
+                modalImg.alt = this.alt;
+            });
+        });
+
+
+        closeBtn.addEventListener("click", closeModal);
+
+
+        modal.addEventListener("click", function (e) {
+            if (e.target !== modalImg) {
+                closeModal();
+            }
+        });
+
+
+        function closeModal() {
+            modal.classList.remove("active");
+            modalImg.src = "";
+        }
     });
 </script>
 </body>
