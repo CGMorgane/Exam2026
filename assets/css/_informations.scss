@@ -2,7 +2,7 @@
 
 
 .slide#info {
-  background-color: $text-color2;
+  background-color: $bg-principal;
   margin-top: 0;
   padding-top: 0;
   min-height: 100vh;
@@ -15,6 +15,7 @@
     justify-content: center;
     flex-direction: column;
     color: $bg-principal;
+    background-color: $bg-secondaire;
 
     #right-info {
       position: relative;
@@ -31,7 +32,8 @@
 
   .carousel-wrapper {
     width: 100%;
-    min-height: calc(100vh - 204px);
+    //min-height: calc(100vh - 204px);
+    height: auto;
     background-color: $bg-principal;
     display: flex;
     align-items: flex-start;
@@ -91,6 +93,10 @@
       scroll-behavior: smooth;
       scroll-snap-type: x mandatory;
       width: 100%;
+
+      height: auto;           /* Crucial : pas de hauteur fixe ici non plus */
+      align-items: stretch;   /* Aligne toutes les slides sur la hauteur de la plus grande */
+
       scrollbar-width: none;
       &::-webkit-scrollbar { display: none; }
     }
@@ -100,15 +106,19 @@
       scroll-snap-align: start;
       box-sizing: border-box;
       display: flex;
+      flex-direction: column;
       align-items: flex-start;
-      position: relative;
-      padding: 0;
+      width: 100%;
+
+      height: auto; /* Permet à la slide de grandir verticalement selon le texte */
+
 
       .slide-content {
         width: 75vw;
         max-width: 75vw;
         padding-right: 5%;
         box-sizing: border-box;
+
       }
 
       .slide-title {
@@ -116,10 +126,10 @@
         color: $text-color;
         font-size: 64px;
         font-weight: 700;
-        margin-bottom: 25px;
         text-transform: uppercase;
         margin-top: 0;
         letter-spacing: 11%;
+        margin-bottom: 50px;
       }
 
       .slide-text {
@@ -130,6 +140,169 @@
         line-height: 1.8;
         width: 100%;
         letter-spacing: 11%;
+
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1440px) {
+  .slide#info{
+    .carousel-wrapper{
+      padding-top: 400px;
+      .carousel-slide{
+        .slide-text{
+          font-size: 28px;
+        }
+        .slide-title{
+          font-size: 60px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .slide#info{
+    .carousel-wrapper{
+      padding-top: 350px;
+      flex-direction: column;
+      align-items: center;
+
+      .carousel-slide {
+        .slide-content {
+          width: 100%;
+          max-width: 100%;
+          padding-right: 0;
+        }
+        .slide-text{
+          font-size: 24px;
+        }
+        .slide-title{
+          font-size: 55px;
+        }
+      }
+
+      .carousel-next-btn {
+        position: static;
+        transform: none;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        &:hover {
+          transform: scale(1.08);
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 866px) {
+  .slide#info{
+    .carousel-wrapper{
+
+      padding-top: 300px;
+      .carousel-slide{
+
+        .slide-title{
+          font-size: 50px;
+        }
+      }
+
+      .carousel-next-btn {
+        /* Taille du bouton pour 866px */
+        width: 60px;
+        height: 60px;
+        margin-top: 35px;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .slide#info{
+    .carousel-wrapper{
+      padding-top: 250px;
+      .carousel-slide{
+
+        .slide-title{
+          font-size: 45px;
+        }
+      }
+
+      .carousel-next-btn {
+        /* Taille du bouton pour 768px */
+        width: 55px;
+        height: 55px;
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 585px) {
+  .slide#info{
+    .carousel-wrapper{
+      padding-top: 200px;
+      .carousel-slide{
+
+        .slide-title{
+          font-size: 35px;
+        }
+      }
+
+      .carousel-next-btn {
+        /* Taille du bouton pour 585px */
+        width: 50px;
+        height: 50px;
+        margin-top: 25px;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .slide#info{
+    .carousel-wrapper{
+      padding-top: 150px;
+      .carousel-slide{
+
+        .slide-title{
+          font-size: 35px;
+        }
+      }
+
+      .carousel-next-btn {
+        /* Taille du bouton pour 480px */
+        width: 45px;
+        height: 45px;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 366px) {
+  .slide#info{
+    .carousel-wrapper{
+      padding-top: 100px;
+      .carousel-slide{
+
+        .slide-title{
+          font-size: 25px;
+        }
+      }
+
+      .carousel-next-btn {
+        /* Taille du bouton pour 366px */
+        width: 40px;
+        height: 40px;
+        margin-top: 15px;
       }
     }
   }
