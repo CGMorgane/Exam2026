@@ -22,7 +22,7 @@
     text-align: center;
   }
 
-  .sponsors {
+  .partners-logos {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     width: 100%;
@@ -43,13 +43,29 @@
       align-items: center;
     }
 
-    #jupiler { grid-column: span 1;}
-    #redbull { grid-column: span 1;}
-    #studiobruseel { grid-column: span 1;}
-    #rtbf { grid-column: span 1;}
-    #proximus { grid-column: span 1;}
+    #brand-jup {
+      grid-column: span 1;
+    }
+
+    #brand-red {
+      grid-column: span 1;
+    }
+
+    #brand-stu {
+      grid-column: span 1;
+    }
+
+    #brand-rtbf {
+      grid-column: span 1;
+    }
+
+    #brand-prox {
+      grid-column: span 1;
+    }
   }
 }
+
+// ... vos media queries restent inchangées
 
 
 @media screen and (max-width: 585px) {
