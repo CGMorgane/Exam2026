@@ -391,6 +391,15 @@
     padding-top: 50px;
     gap: 25px;
 
+    .ticker-item{
+      span{
+        font-size: 80px !important;
+      }
+    }
+
+    .tickets-container {
+      padding-top: 50px !important;
+    }
 
     #combi, #jeudi-ticket, #vendredi-ticket, #samedi-ticket, #dimanche-ticket {
       width: 100%;
