@@ -13,12 +13,10 @@
         display: inline-block;
         font-family: $font-orbitron;
         font-weight: 900;
-        font-size: 8vw;
+        font-size: 10vw;
         text-align: center;
         z-index: 100;
-        padding-top: 80px;
-        padding-bottom: 0px;
-        margin-bottom: 150px;
+        margin-bottom: 80px;
         -webkit-box-reflect: below -0.5em linear-gradient(transparent 20%, rgba(255, 255, 255, 0.3));
       }
     }
@@ -109,6 +107,10 @@
 @media screen and (max-width: 1024px) {
   #line-up {
     .lineup-title #right {
+      font-size: 15vw;
+    }
+
+    .lineup-title #right {
       padding-top: 60px;
 
     }
@@ -136,6 +138,10 @@
 
 @media screen and (max-width: 866px) {
   #line-up {
+    .lineup-title #right {
+      font-size: 15vw;
+    }
+
     .planning-haut, .planning-bas {
 
       p { font-size: 36px; }
@@ -164,6 +170,9 @@
 
 @media screen and (max-width: 585px) {
   #line-up {
+    .lineup-title #right {
+      font-size: 15vw;
+    }
     .planning-haut, .planning-bas {
       p { font-size: 26px; }
       ul li { font-size: 16px; }
@@ -174,6 +183,11 @@
 
 @media screen and (max-width: 480px) {
   #line-up {
+
+   .lineup-title #right {
+     font-size: 15vw;
+   }
+
     .info-lineup { font-size: 16px; }
 
     .planning-haut, .planning-bas {

@@ -79,6 +79,7 @@
 
   .tickets-container{
     width: 95%;
+    padding-bottom: 20px;
     margin: 0 auto;
     display: flex;
     padding-top: 200px;
@@ -95,7 +96,7 @@
       font-family: $font-orbitron;
       font-weight: 900;
       color: $text-color;
-      font-size: 45px;
+      font-size: 35px;
     }
 
     .titre-bas{

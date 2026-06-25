@@ -14,8 +14,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    color: $bg-principal;
-    background-color: $bg-secondaire;
+    color: $text-color2;
+
 
     #right-info {
       position: relative;
@@ -27,6 +27,7 @@
       margin-top: 20px;
       line-height: 0.73;
       display: inline-block;
+      -webkit-box-reflect: below -0em linear-gradient(transparent 20%, rgba(255, 255, 255, 0.3));
     }
   }
 
@@ -34,7 +35,6 @@
     width: 100%;
     //min-height: calc(100vh - 204px);
     height: auto;
-    background-color: $bg-principal;
     display: flex;
     align-items: flex-start;
     position: relative;
@@ -43,20 +43,20 @@
     padding-left: 5%;
     padding-right: 5%;
 
-    #turned-info {
-      position: absolute;
-      top: 0;
-      left: -20px;
-      line-height: 0.78;
-      color: $text-color-opacity;
-      font-family: $font-orbitron;
-      font-weight: 900;
-      font-size: 14.6vw;
-      transform: scaleY(-1);
-      filter: blur(0.5px);
-      opacity: 60%;
-      z-index: 99;
-    }
+    //#turned-info {
+    //  position: absolute;
+    //  top: 0;
+    //  left: -20px;
+    //  line-height: 0.78;
+    //  color: $text-color-opacity;
+    //  font-family: $font-orbitron;
+    //  font-weight: 900;
+    //  font-size: 14.6vw;
+    //  transform: scaleY(-1);
+    //  filter: blur(0.5px);
+    //  opacity: 60%;
+    //  z-index: 99;
+    //}
 
 
     .carousel-next-btn {
@@ -246,11 +246,16 @@
 @media screen and (max-width: 585px) {
   .slide#info{
     .carousel-wrapper{
+
       padding-top: 200px;
       .carousel-slide{
 
         .slide-title{
           font-size: 35px;
+        }
+
+        .slide-text{
+          font-size: 16px;
         }
       }
 
